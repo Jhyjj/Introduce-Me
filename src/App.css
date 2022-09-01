@@ -1,38 +1,154 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100%;
+  padding-top: 50px;
+  background: url('/public/background2.jpg') no-repeat center;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.apps{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-left: 50px;
+}
+
+.apps>div{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.apps>div>span{
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: -10%;
+  transform: translateX(-50%);
+}
+
+#bins{
+  background: url('/public/bin.png') center;
+  background-size: contain;
+}
+
+#mypc{
+  background: url('/public/mypc.png') center;
+  background-size: contain;
+}
+
+#messenger{
+  background:  url('/public/avocado.png') center;
+  background-size: contain;
+}
+
+
+/* 푸터 */
+#footer{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  background-color:#555;
+}
+
+/* intro */
+
+/* popup */
+
+#popup{
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  background:  #eee;
+  transition: 1s;
+  line-height: 100px;
+}
+
+#chat{
+  width: 500px;
+  height: 600px;
+  background-color: rgb(201, 239, 177);
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+  display: none;
+}
+
+#chat>div{
+  width: 100%;
+}
+
+/* 채팅창 화면 -> 애니메이션 구현될 화면 */
+#chat>div:first-child{
+  height: 80%;
+  padding: 20px 10px;
+}
+#chat>div:first-child .hj{
+  margin-bottom: 15px;
+  text-align: left;
+  margin-left: 20px;
+}
+#chat .chat-box{
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* 채팅 입력칸 */
+
+
+
+
+
+
+
+#chat>div:nth-child(2){
+  height: 20%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#chat>div:nth-child(2)>div{
+  display: inline-block;
+  width: 78%;
+  height: 90%;
+  outline: none;
+  border: none;
+  background: #fff;
+  padding-left: 10px;
+  text-align: left;
+  padding-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#chat>div:nth-child(2)>button{
+  width: 20%;
+  height: 90%;
+  outline: none;
+  border: none;
+}
+
+.small-logo{
+  font-size: 24px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(201, 239, 177);
+  background-color: rgb(201, 239, 177);
 }
