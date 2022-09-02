@@ -111,13 +111,21 @@ a{
   background: #fff;
 }
 
+#chat>div:first-child .user{
+  text-align: right;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#chat .chat-box.img{
+  width: 100px;
+  height: 100px;
+  background:  url('/public/avocado.png') center;
+  border: 4px solid #fff;
+}
+
+
 /* 채팅 입력칸 */
-
-
-
-
-
-
 
 #chat>div:nth-child(2){
   height: 20%;
