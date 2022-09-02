@@ -160,3 +160,12 @@ a{
   border: 1px solid rgb(201, 239, 177);
   background-color: rgb(201, 239, 177);
 }
+
+/* 팝업되는 리주메 */
+#popupImg{
+  width: 500px;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+
+}

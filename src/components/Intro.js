@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ImgPopup from './ImgPopup';
 
 const Intro = () => {
     let chatting = document.querySelector('.chat-contents');
@@ -56,8 +57,6 @@ const Intro = () => {
     }
 
     useEffect(()=>{
-        
-    })
         if(userChat.length===1){
             setTimeout(()=>{
                 let hjChat = document.createElement('div');
@@ -75,7 +74,8 @@ const Intro = () => {
                 chatting.appendChild(hjChat);
             },2000)
         }
-
+    },[userChat.length])
+       
         window.addEventListener('click',(e)=>{
             if(e.target.className === "chat-box img"){
                 console.log("이미지 팝업 실행")
@@ -104,6 +104,7 @@ const Intro = () => {
                     <button onClick={onClick2}>전송</button>
                 </div>
             </div>
+            {img&& <ImgPopup/>}
         </div>
     );
 };
