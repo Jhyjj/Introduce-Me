@@ -3,7 +3,15 @@ import React from 'react';
 const ImgPopup = () => {
     return (
         <div id="popupImg">
-            <h2>이미지팝업 실행됨</h2>
+           <div className='inner-contents'>
+            첫번째 자기소개
+           </div>
+           <div className='inner-contents'>
+            기술스택
+           </div>
+           <div className='inner-contents'>
+            포트폴리오
+           </div>
         </div>
     );
 };
