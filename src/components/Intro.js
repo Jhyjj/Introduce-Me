@@ -84,6 +84,11 @@ const Intro = () => {
 
         })
 
+    const closePopup = ()=>{
+        console.log("이미지팝업 닫기")
+        setImg(false);
+    }
+
 
     return (
         <div id="intro">
@@ -104,7 +109,7 @@ const Intro = () => {
                     <button onClick={onClick2}>전송</button>
                 </div>
             </div>
-            {img&& <ImgPopup/>}
+            {img&& <ImgPopup closePopup={closePopup}/>}
         </div>
     );
 };

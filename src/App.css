@@ -1,3 +1,5 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
 
 *{
   padding: 0;
@@ -6,6 +8,9 @@
 }
 li{
   list-style: none;
+}
+body{
+  overflow:hidden;
 }
 a{
   text-decoration: none;
@@ -18,6 +23,7 @@ a{
   padding-top: 50px;
   background: url('/public/background2.jpg') no-repeat center;
   background-size: cover;
+  position: relative;
 }
 
 .apps{
@@ -66,7 +72,6 @@ a{
   background-color:#555;
 }
 
-/* intro */
 
 /* popup */
 
@@ -161,11 +166,240 @@ a{
   background-color: rgb(201, 239, 177);
 }
 
-/* 팝업되는 리주메 */
+/* 팝업*/
 #popupImg{
-  width: 500px;
-  height: 300px;
-  background: #fff;
+  width: 100%;
+  height: 100%;
+  background: #eee;
   position: absolute;
-
+  top: 0; left: 0;
 }
+
+#popupImg>ul{
+  margin: 0 auto;
+  width: 90%;
+  height: 85%;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 3%;
+  position: relative;
+  overflow: hidden;
+}
+
+#popupImg>ul>li{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-family: nanumsquare;
+}
+
+#popupImg>ul>li:nth-child(1){
+  left: 0;
+}
+
+#popupImg>ul>li:nth-child(2){
+  left: 100%;
+}
+
+#popupImg>ul>li:nth-child(3){
+  left:200%;
+}
+
+
+
+/* 이전/다음버튼 */
+
+#popupImg>span:nth-child(1){
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #bbb;
+  border-right: 4px solid #bbb;
+  transform: rotate(225deg);
+  cursor: pointer;
+}
+#popupImg>span:nth-child(1):hover{
+  border-top: 4px solid #555;
+  border-right: 4px solid #555;
+}
+
+#popupImg>span:last-child{
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  width: 15px;
+  height: 15px;
+  border-bottom: 4px solid #bbb;
+  border-left: 4px solid #bbb;
+  transform: rotate(225deg);
+  cursor: pointer;
+}
+
+#popupImg>span:last-child:hover{
+  border-bottom: 4px solid #555;
+  border-left: 4px solid #555;
+}
+
+
+/* 닫기버튼 */
+.likebtn{
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 30px;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.likebtn:hover{
+  color: #555;
+}
+
+/* 팝업메세지 창 */
+#popmessage{
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 10%;
+  transform: translate(-50%,-50%);
+}
+#popmessage>h5{
+  padding: 5%;
+  background-color: #ccc;
+  color: #555;
+}
+
+/* 스킬 페이지 */
+#skills{
+  width: 100%;
+  height: 100%;
+  font-family: nanumsquare;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#skills h2{
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+#skills>div{
+  width: 100%;
+  text-align: left;
+}
+
+#skills img{
+  height: 40px;
+}
+
+#skills table{
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#skills table>tr>td:nth-child(2){
+  width: 80%;
+  text-align: left;
+  padding: 0;
+}
+
+#skills table>tr>td:nth-child(2)>div{
+  height: 100%;
+  background-color: springgreen;
+  text-align: right;
+  padding: 5px;
+}
+
+#skills table>tr>td:nth-child(2)>div#html{
+  width: 90%;
+}
+#skills table>tr>td:nth-child(2)>div#css{
+  width: 80%;
+}
+#skills table>tr>td:nth-child(2)>div#scss{
+  width: 80%;
+}
+#skills table>tr>td:nth-child(2)>div#js{
+  width: 80%;
+}
+#skills table>tr>td:nth-child(2)>div#react{
+  width: 75%;
+}
+#skills table>tr>td:nth-child(2)>div#redux{
+  width: 75%;
+}
+#skills table>tr>td:nth-child(2)>div#node{
+  width: 70%;
+}
+#skills table>tr>td:nth-child(2)>div#mysql{
+  width: 75%;
+}
+#skills table>tr>td:nth-child(2)>div#php{
+  width: 65%;
+}
+#skills table>tr>td:nth-child(2)>div#git{
+  width: 70%;
+}
+
+/* 포트폴리오 페이지 */
+#portfolio{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  }
+
+  #portfolio>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    height: 45%;
+    margin: 0 auto;
+  }
+
+  #portfolio ul>li{
+    width: 24%;
+    height: 100%;
+    border: 1px solid #ccc;
+  }
+
+  #portfolio img{
+    width: 90%;
+    height: 60%;
+  }
+
+  #portfolio>div{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+
+
+  #portfolio>div>ul{
+    display: flex;
+    width: 90%; height: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+
+/* 자기소개 페이지 */
+#mypr{
+  background-color: lightsalmon;
+  width: 100%;
+  height: 100%;
+}
+
+
+
