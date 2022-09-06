@@ -120,7 +120,7 @@ const Intro = () => {
             setTimeout(()=>{
                 let hjChat = document.createElement('div');
                 hjChat.className = "hj";
-                hjChat.innerHTML = `<div class="chat-box file"><span>resume.pdf</span><a href="./imgs/meme.jpg" target="_blank"><img src="./imgs/download.png" alt=""/></a></div>`
+                hjChat.innerHTML = `<div class="chat-box file"><span>resume.pdf</span><a href="./resume.pdf" target="_blank"><img src="./imgs/download.png" alt=""/></a></div>`
                 chatting.appendChild(hjChat);
             },5000)
         }
