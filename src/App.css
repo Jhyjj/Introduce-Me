@@ -1,5 +1,16 @@
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
+/* 애니메이션 클릭미 */
+
+@keyframes clickme{
+  0%{
+    border: 3px solid #eee;
+  }
+  100%{
+    border: 3px solid lime;
+  }
+}
+
 
 *{
   padding: 0;
@@ -79,11 +90,13 @@ a{
   width: 300px;
   height: 100px;
   position: absolute;
+  cursor: pointer;
   bottom: -50px;
   right: 0;
   background:  #eee;
   transition: 1s;
   line-height: 100px;
+  animation: clickme 1.5s 4s infinite normal none;
 }
 
 #chat{
@@ -127,6 +140,7 @@ a{
   height: 100px;
   background:  url('/public/imgs/meme.jpg') center/100%;
   border: 4px solid #fff;
+  cursor: pointer;
 }
 
 #chat .chat-box.file{
@@ -182,6 +196,11 @@ a{
   height: 90%;
   outline: none;
   border: none;
+}
+
+#chat>div:nth-child(2)>button.on{
+  animation: clickme 1s 4s infinite normal none;
+  cursor: pointer;
 }
 
 .small-logo{
@@ -323,7 +342,7 @@ a{
 
 #skills h2{
   margin-left: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 #skills>div{

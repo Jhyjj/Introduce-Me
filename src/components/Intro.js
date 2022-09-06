@@ -46,15 +46,20 @@ const Intro = () => {
 
     const userChat = document.querySelectorAll('.user');
     //전송버튼을 누르면 유저의 코멘트가 채팅창에 나타나고, 입력란은 비워짐
-    const onClick2 = ()=>{
-        let userchat = document.createElement('div');
-        let userchat1 = document.createElement('span');
-        userchat.className = "user";
-        userchat1.className = "chat-box";
-        userchat1.innerHTML = userComent;
-        userchat.appendChild(userchat1);
-        chatting.appendChild(userchat);
-        setUserComent("");
+    const onClick2 = (e)=>{
+        if(e.target.className === 'on'){
+            let userchat = document.createElement('div');
+            let userchat1 = document.createElement('span');
+            userchat.className = "user";
+            userchat1.className = "chat-box";
+            userchat1.innerHTML = userComent;
+            userchat.appendChild(userchat1);
+            chatting.appendChild(userchat);
+            setUserComent("");
+            //클래스 제거해서 키프레임 애니메이션 멈추기
+            document.querySelector('.user-insert>button').classList.remove('on');
+        }
+       
     }
 
     useEffect(()=>{
@@ -158,7 +163,7 @@ const Intro = () => {
 
                 <div className='user-insert'>
                     <div id="userComent"></div>
-                    <button onClick={onClick2}>전송</button>
+                    <button onClick={onClick2} className="on">전송</button>
                 </div>
             </div>
             {img&& <ImgPopup closePopup={closePopup}/>}
