@@ -6,6 +6,7 @@ const Intro = () => {
     const [userComent, setUserComent] = useState("");
 
     const [img,setImg] = useState(false); //이미지팝업 상태관리
+    const [count,setCount] = useState(0);
 
     let speed = 100;
     useEffect(()=>{
@@ -75,6 +76,55 @@ const Intro = () => {
             },2000)
         }
     },[userChat.length])
+
+    useEffect(()=>{
+        if(count===1){
+            console.log("첫번째 닫기입니다.");
+            setTimeout(()=>{
+                let hjChat = document.createElement('div');
+                let hjChat1 = document.createElement('span');
+                hjChat.className = "hj";
+                hjChat1.className = "chat-box margin";
+                hjChat1.innerHTML = "혹시 저에 대해 더 알고싶거나, 관심이 생기신다면";
+                hjChat.appendChild(hjChat1);
+                chatting.appendChild(hjChat);
+            },1000)
+            setTimeout(()=>{
+                let hjChat = document.createElement('div');
+                let hjChat1 = document.createElement('span')
+                hjChat.className = "hj";
+                hjChat1.className = "chat-box";
+                hjChat1.innerHTML = "jhyj3768@gmail.com으로 연락부탁드립니다.";
+                hjChat.appendChild(hjChat1);
+                chatting.appendChild(hjChat);
+            },2000)
+            setTimeout(()=>{
+                let hjChat = document.createElement('div');
+                let hjChat1 = document.createElement('span')
+                hjChat.className = "hj";
+                hjChat1.className = "chat-box";
+                hjChat1.innerHTML = "이력서를 보내드리겠습니다.";
+                hjChat.appendChild(hjChat1);
+                chatting.appendChild(hjChat);
+            },3000)
+            setTimeout(()=>{
+                let hjChat = document.createElement('div');
+                let hjChat1 = document.createElement('span')
+                hjChat.className = "hj";
+                hjChat1.className = "chat-box";
+                hjChat1.innerHTML = "감사합니다.😌";
+                hjChat.appendChild(hjChat1);
+                chatting.appendChild(hjChat);
+            },4000)
+            //이력서 첨부파일
+            setTimeout(()=>{
+                let hjChat = document.createElement('div');
+                hjChat.className = "hj";
+                hjChat.innerHTML = `<div class="chat-box file"><span>resume.pdf</span><a href="./imgs/meme.jpg" target="_blank"><img src="./imgs/download.png" alt=""/></a></div>`
+                chatting.appendChild(hjChat);
+            },5000)
+        }
+    },[count])
        
         window.addEventListener('click',(e)=>{
             if(e.target.className === "chat-box img"){
@@ -83,6 +133,13 @@ const Intro = () => {
             }
 
         })
+
+    const closePopup = ()=>{
+        console.log("이미지팝업 닫기")
+        setImg(false);
+        setCount(count+1); //첫번째 닫기에서만 뒤에 추가 채팅 입력
+    }
+
 
 
     return (
@@ -104,7 +161,7 @@ const Intro = () => {
                     <button onClick={onClick2}>전송</button>
                 </div>
             </div>
-            {img&& <ImgPopup/>}
+            {img&& <ImgPopup closePopup={closePopup}/>}
         </div>
     );
 };
