@@ -4,10 +4,10 @@
 
 @keyframes clickme{
   0%{
-    border: 3px solid #eee;
+    opacity: 0;
   }
   100%{
-    border: 3px solid lime;
+    opacity: 1;
   }
 }
 
@@ -96,7 +96,26 @@ a{
   background:  #eee;
   transition: 1s;
   line-height: 100px;
-  animation: clickme 1.5s 4s infinite normal none;
+  
+}
+
+/* 클릭미 */
+.clickme{
+  position: absolute;
+  width: 100px; height: 100px;
+  display: none;
+}
+
+#popup img.on{
+  display: block;
+  right: 50px; top: -100px;
+  animation: clickme 1s infinite normal none;
+}
+
+.user-insert img.on{
+  display: block;
+  right: 0; bottom: 100px;
+  animation: clickme 1s infinite normal none;
 }
 
 #chat{
@@ -112,6 +131,7 @@ a{
 #chat>div{
   width: 100%;
 }
+
 
 /* 채팅창 화면 -> 애니메이션 구현될 화면 */
 #chat>div:first-child{
@@ -199,7 +219,7 @@ a{
 }
 
 #chat>div:nth-child(2)>button.on{
-  animation: clickme 1s 4s infinite normal none;
+
   cursor: pointer;
 }
 

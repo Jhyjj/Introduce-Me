@@ -13,6 +13,9 @@ const Intro = () => {
         // 채팅창 애니메이션 구현
         setTimeout(()=>{
             document.querySelector('#popup').style.bottom = '50px';//채팅창 알림
+            setTimeout(()=>{
+                document.querySelector('#popup>img').classList.add('on');
+            },1000)
         },3000)
     },[])
     
@@ -20,8 +23,13 @@ const Intro = () => {
     const onClick = ()=>{
         document.querySelector('#popup').style.bottom = '-50px';
         document.querySelector('#chat').style.display = 'block';
+        document.querySelector('#popup>img').classList.remove('on');
         setTimeout(()=>{
             setUserComent("누구세요?")
+            setTimeout(()=>{
+                //버튼 클릭미 class on
+                document.querySelector('.user-insert>img').classList.add('on')
+            })
         },1500)
 
     }
@@ -57,7 +65,7 @@ const Intro = () => {
             chatting.appendChild(userchat);
             setUserComent("");
             //클래스 제거해서 키프레임 애니메이션 멈추기
-            document.querySelector('.user-insert>button').classList.remove('on');
+            document.querySelector('.user-insert>img').classList.remove('on');
         }
        
     }
@@ -151,6 +159,7 @@ const Intro = () => {
         <div id="intro">
             <div id="popup" onClick={onClick}>
                 <span className="small-logo">🥑</span>새로운 메세지가 도착했습니다.
+                <img className='clickme' src="./imgs/clickme.png" alt=''/>
             </div>
 
             <div id="chat">
@@ -164,6 +173,7 @@ const Intro = () => {
                 <div className='user-insert'>
                     <div id="userComent"></div>
                     <button onClick={onClick2} className="on">전송</button>
+                    <img className='clickme' src="./imgs/clickme.png" alt=''/>
                 </div>
             </div>
             {img&& <ImgPopup closePopup={closePopup}/>}

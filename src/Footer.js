@@ -1,6 +1,22 @@
-import React from 'react';
 
 const Footer = () => {
+
+    //오른쪽 하단 시계 구현하기
+    function getTime(){
+        const date = new Date();
+        const minutes = date.getMinutes();
+        const hours = date.getHours();
+        console.log(`${hours}:${minutes}`)
+    }
+
+    function init(){
+        getTime();
+        setInterval(getTime,1000);
+    }
+
+    init();
+
+
     return (
         <div id="footer">
             <div className='inner-contents'>
