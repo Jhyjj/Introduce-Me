@@ -91,7 +91,7 @@ a{
   height: 100px;
   position: absolute;
   cursor: pointer;
-  bottom: -50px;
+  bottom: -100%;
   right: 0;
   background:  #eee;
   transition: 1s;

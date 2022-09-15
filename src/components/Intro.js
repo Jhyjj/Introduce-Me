@@ -12,7 +12,7 @@ const Intro = () => {
     useEffect(()=>{
         // 채팅창 애니메이션 구현
         setTimeout(()=>{
-            document.querySelector('#popup').style.bottom = '50px';//채팅창 알림
+            document.querySelector('#popup').style.bottom = '0';//채팅창 알림
             setTimeout(()=>{
                 document.querySelector('#popup>img').classList.add('on');
             },1000)
