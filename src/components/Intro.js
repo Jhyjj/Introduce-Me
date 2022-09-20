@@ -21,7 +21,7 @@ const Intro = () => {
     
 
     const onClick = ()=>{
-        document.querySelector('#popup').style.bottom = '-50px';
+        document.querySelector('#popup').style.bottom = '-100%';
         document.querySelector('#chat').style.display = 'block';
         document.querySelector('#popup>img').classList.remove('on');
         setTimeout(()=>{
