@@ -12,7 +12,11 @@ const Intro = () => {
     useEffect(()=>{
         // 채팅창 애니메이션 구현
         setTimeout(()=>{
-            document.querySelector('#popup').style.bottom = '0';//채팅창 알림
+            if(window.innerWidth>768){
+                document.querySelector('#popup').style.bottom = '0';//채팅창 알림
+            }else{
+                document.querySelector('#popup').style.top = '0';//채팅창 알림
+            }
             setTimeout(()=>{
                 document.querySelector('#popup>img').classList.add('on');
             },1000)
@@ -21,7 +25,12 @@ const Intro = () => {
     
 
     const onClick = ()=>{
-        document.querySelector('#popup').style.bottom = '-100%';
+        if(window.innerWidth>768){
+            document.querySelector('#popup').style.bottom = '-10%';
+        }else{
+            document.querySelector('#popup').style.top = '-10%';
+        }
+        
         document.querySelector('#chat').style.display = 'block';
         document.querySelector('#popup>img').classList.remove('on');
         setTimeout(()=>{

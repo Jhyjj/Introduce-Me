@@ -8,9 +8,9 @@ const Portfolio = () => {
                 <li>
                     <img src="./imgs/신세개백화점.png" alt=""/>
                     <h4>신세개백화점</h4>
-                    <span>개인프로젝트 - 반려견 장난감 쇼핑몰사이트</span>
+                    <span>반려견 장난감 쇼핑몰사이트</span>
                     <div className='protfolio_hover'>
-                        <span>React를 이용한 프로젝트입니다.<br/> useState와 Redux를 이용한 상태관리,
+                        <span>React를 이용한 개인프로젝트.<br/> useState와 Redux를 이용한 상태관리,
                     회원가입, 로그인, 검색, 장바구니, 리뷰작성, 1:1문의 등 기능을 구현했습니다.<br/>
                     서버는 node.js를 사용했고, DB는 AWS-MYSQL을 사용했습니다.</span><br/>
                        <a href="https://mm2-shopping-client.vercel.app/" target="_blank" className='home'></a>

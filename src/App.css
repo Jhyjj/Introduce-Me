@@ -91,7 +91,7 @@ a{
   height: 100px;
   position: absolute;
   cursor: pointer;
-  bottom: -100%;
+  bottom: -10%;
   right: 0;
   background:  #eee;
   transition: 0.5s;
@@ -659,7 +659,7 @@ a{
   }
 
   #myphone>div:nth-child(2)>div:nth-child(3)>span{
-    width: 100%;
+    display: inline-block;
     height: 100%;
     font-size: 100px;
     background-color: rgb(201, 239, 177);
@@ -672,5 +672,79 @@ a{
 
   /* 모바일 버전에서 기존 팝업창 수정 */
   /* 메세지 알림 팝업창 위에서 아래로 */
+  #popup{
+    width: 100%;
+    position: absolute;
+    top: -10%;
+    font-size: 24px;
+    background:  #eee;
+  }
+
+  #popup>span{
+    font-size: 40px;
+    margin-right: 5%;
+  }
+
+  #popup img.on{
+    display: block;
+    right: 20px; top:0;
+    transform: rotate(55deg);
+    animation: clickme 1s infinite normal none;
+  }
+ 
+  #chat{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1%;
+    font-size: 24px;
+  }
+
+  .user-insert button{
+    font-size: 24px;
+  }
+
+  .user-insert img.on{
+    right: 3%; bottom: 150px;
+  }
+
+  #popupImg{
+    width: 100%;
+    height: 100%;
+  }
+
+  #portfolio>ul{
+    flex-wrap: wrap;
+  }
+
+ #portfolio>ul>li{
+  height: 48%;
+ }
+  #portfolio ul>li{
+    width: 48%;
+  }
+  #portfolio>ul>li>span{
+    font-size: 14px;
+  }
+
+  #mypr>div:nth-child(2){
+    margin-left: 0;
+    padding: 5%;
+  }
+
+  #mypr>div:nth-child(3){
+    padding: 3%;
+  }
+
+  #popupImg>ul{
+    height: 90%;
+    margin-top: 5%;
+  }
+
+  .likebtn{
+    top: 0%;
+    font-size: 25px;
+  }
 
 }
