@@ -75,6 +75,7 @@ const Intro = () => {
             setUserComent("");
             //클래스 제거해서 키프레임 애니메이션 멈추기
             document.querySelector('.user-insert>img').classList.remove('on');
+            document.querySelector('.user-insert>button').classList.remove('on');
         }
        
     }
