@@ -119,12 +119,12 @@ a{
 }
 
 #chat{
-  width: 500px;
-  height: 600px;
+  width: 40%;
+  height: 85%;
   background-color: rgb(201, 239, 177);
   position: absolute;
   right: 20%;
-  bottom: 20%;
+  top: 5%;
   display: none;
 }
 
@@ -173,7 +173,7 @@ a{
 
 #chat .chat-box.file>a{
   display: inline-block;
-  width: 50px; height: 50px;
+  width: 30px; height: 30px;
   border: 1px solid #ccc;
   border-radius: 50%;
   text-align: center;
@@ -181,6 +181,7 @@ a{
 }
 
 #chat .chat-box.file>a>img{
+  width: 100%; height: 100%;
  position: absolute;
  top: 50%; left: 50%;
  transform: translate(-50%,-50%);
@@ -686,7 +687,7 @@ a{
   }
 
   #popup>span{
-    font-size: 40px;
+    font-size: 24px;
     margin-right: 5%;
   }
 
@@ -703,11 +704,6 @@ a{
     top: 0;
     left: 0;
     padding: 1%;
-    font-size: 18px;
-  }
-
-  .user-insert button{
-    font-size: 18px;
   }
 
   .user-insert img.on{
@@ -740,6 +736,10 @@ a{
 
   #mypr>div:nth-child(3){
     padding: 3%;
+  }
+
+  #mypr>div:nth-child(3)>img{
+    width: 30%;
   }
 
   #popupImg>ul{
