@@ -26,9 +26,9 @@ const Intro = () => {
 
     const onClick = ()=>{
         if(window.innerWidth>768){
-            document.querySelector('#popup').style.bottom = '-10%';
+            document.querySelector('#popup').style.bottom = '-100px';
         }else{
-            document.querySelector('#popup').style.top = '-10%';
+            document.querySelector('#popup').style.top = '-100px';
         }
         
         document.querySelector('#chat').style.display = 'block';
