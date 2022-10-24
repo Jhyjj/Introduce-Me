@@ -77,6 +77,7 @@ const Portfolio = () => {
                         <div className='protfolio_hover'>
                         <span>리액트로 만든 블로그입니다.<br/> 이미지를 추가할 수 있는 에디터를 만들어보았습니다.</span>
                         <a href="https://github.com/Jhyjj/MyBlog.git" target="_blank" className='github'></a>
+                        <a href="https://github.com/Jhyjj/blog_server.git" target="_blank" className='github'></a>
                         </div>
                     </li>
                 </ul>
