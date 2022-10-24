@@ -36,7 +36,7 @@ const Portfolio = () => {
                     <h4>HHH</h4>
                     <span>팀 프로젝트 - 숙소 예약 사이트</span>
                     <div className='protfolio_hover'>
-                        <span>React로 만든 숙소예약사이트 입니다.<br/> 회원가입, 로그인, 검색, 숙소예약 등 기능을 구현했습니다.</span><br/>
+                        <span>React로 만든 숙소예약사이트 입니다.<br/> 회원가입, 로그인, 검색, 숙소예약 등 기능을 구현했습니다.<br/>현재 서버 만료 문제로 local서버로 변경했습니다.</span><br/>
                        <a href="https://hhh-client.vercel.app/" target="_blank" className='home'></a>
                        <a href="https://github.com/Jhyjj/hhh-client" target="_blank" className='github'></a>
                        <a href="https://github.com/Jhyjj/hhh_server" target="_blank" className='github'></a>
@@ -60,7 +60,6 @@ const Portfolio = () => {
                         <h4>야구게임</h4>
                         <div className='protfolio_hover'>
                             <span>자바스크립트를 이용한 야구게임입니다.</span>
-                            <a href="" target="_blank" className='home'></a>
                             <a href="https://github.com/Jhyjj/baseballGame.git" target="_blank" className='github'></a>
                         </div>
                     </li>
@@ -68,9 +67,16 @@ const Portfolio = () => {
                         <img src="./imgs/minigame.png" alt=""/>
                         <h4>강쥐게임천국</h4>
                         <div className='protfolio_hover'>
-                        <span>자바스크립트, 캔버스로 만든 미니게임입니다.<br/> 현재 사과게임만 실행되며<br/>(오류 수정중입니다),<br/> 다른 게임도 추가예정입니다.</span>
-                            <a href="" target="_blank" className='home'></a>
+                        <span>자바스크립트, 캔버스로 만든 미니게임입니다.<br/> 현재 사과게임만 실행되며<br/><br/> 다른 게임도 추가예정입니다.</span>
                             <a href="https://github.com/Jhyjj/mini-game.git" target="_blank" className='github'></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./imgs/blog.png" alt=""/>
+                        <h4>블로그</h4>
+                        <div className='protfolio_hover'>
+                        <span>리액트로 만든 블로그입니다.<br/> 이미지를 추가할 수 있는 에디터를 만들어보았습니다.</span>
+                        <a href="https://github.com/Jhyjj/MyBlog.git" target="_blank" className='github'></a>
                         </div>
                     </li>
                 </ul>
