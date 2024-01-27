@@ -27,7 +27,7 @@ const Portfolio = () => {
                         PHP로 작성된 팀프로젝트입니다.<br/> 회원가입, 로그인, 검색, 찜하기, 리뷰작성 등의 기능을 구현했습니다.<br/>
                      DB는 MYSQL을 사용했습니다.
                         </span><br/>
-                       <a href="http://hjindo.dothome.co.kr/php/RECIPE2/" target="_blank" className='home'></a>
+                       <a href="http://jhyjj.dothome.co.kr/index.php" target="_blank" className='home'></a>
                        <a href="https://github.com/Jhyjj/Recipe.git" target="_blank" className='github'></a>
                     </div>
                 </li>
